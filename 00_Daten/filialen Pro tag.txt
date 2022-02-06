@@ -1,0 +1,8 @@
+SELECT [Packdatum]
+      ,Count([Filiale])
+      ,[Bereich]
+
+  FROM [Kennzahlen].[dbo].[Anzahl_GVE_pro_Tag_und_Filiale]
+  --WHERE Bereich = 'DPS'
+  WHERE Bereich = 'DPS'
+  Group BY Packdatum, Bereich 
